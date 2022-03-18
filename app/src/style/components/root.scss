@@ -1,0 +1,46 @@
+$black: #000000;
+$white: #ffffff;
+$gold: #b38934;
+$grey: #252321;
+$lightGrey: #838383;
+$fonts: ('PlayfairDisplay-Italic', 400),
+        ('PlayfairDisplay-Regular', 400),
+        ('times_new_roman', 400);
+
+@each $name, $weight in $fonts {
+    @font-face {
+        font-family: $name;
+        src: url('../fonts/#{$name}.woff');
+        font-weight: $weight;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@media(max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
+}
+      
+// ::-webkit-scrollbar-track {
+//     box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+//     background-color: #f9f9fd;
+//     border-radius: 10px;
+// }
+  
+// ::-webkit-scrollbar-thumb {
+//     border-radius: 10px;
+//     background: linear-gradient(180deg, $gold, #a3710e);
+// }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}

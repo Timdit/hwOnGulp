@@ -1,0 +1,144 @@
+.footer {
+  &__content {
+    display: flex;
+    &-left {
+      width: 100%;
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+
+      .logo {
+        margin-left: 30px;
+      }
+    }
+
+    &-lists {
+      display: flex;
+      margin-left: 130px;
+    }
+
+    &-list1 {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    &-listContact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: 70px;
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      color: $black;
+      font-size: 24px;
+      line-height: 25px;
+      font-family: "times_new_roman";
+    }
+
+    &-number {
+      color: $black;
+      font-size: 17px;
+      line-height: 20px;
+      font-family: "times_new_roman";
+    }
+
+    &-listLocation {
+      margin-left: 60px;
+    }
+
+    &-text {
+      color: $black;
+      font-size: 17px;
+      line-height: 20px;
+      font-family: "times_new_roman";
+      max-width: 199px;
+      width: 100%;
+    }
+
+    &-right,
+    iframe {
+      width: 100%;
+    }
+
+    @media (max-width: 1520px) {
+      &-lists {
+        margin-left: 50px;
+      }
+    }
+  }
+
+  @media(max-width: 1380px) {
+    &__content {
+      flex-wrap: wrap-reverse;
+
+      &-lists {
+        margin-left: 130px;
+      }
+
+      &-listContact, &-listLocation {
+        margin-left: 100px;
+      }
+
+      &-left {
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+@media(max-width: 815px) {
+  .footer {
+    &__content {
+      &-listLocation {
+        margin-left: 30px;
+      }
+      &-listContact {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .footer {
+    &__content {
+      &-leftLogo {
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 540px) {
+  .footer {
+    &__content {
+      &-lists {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media(max-width: 400px) {
+  .footer {
+
+    &__content {
+      &-listLocation, &-listContact {
+        margin-left: 0px;
+      }
+
+      &-list1 {
+        flex-direction: row;
+      }
+
+      &-left {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+
