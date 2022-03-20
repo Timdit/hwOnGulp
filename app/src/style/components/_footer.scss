@@ -137,6 +137,11 @@
       &-left {
         justify-content: center;
       }
+
+      &-lists {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   }
 }

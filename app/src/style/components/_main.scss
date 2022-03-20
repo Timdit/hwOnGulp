@@ -199,7 +199,7 @@
 
     &-sectionRight {
       width: 100%;
-      background: #E5E5E5;
+      background: #e5e5e5;
     }
 
     &-reservTitle {
@@ -230,10 +230,72 @@
       margin-top: 50px;
       margin-bottom: 163px;
     }
+
+    &-menuCards {
+      display: flex;
+    }
+
+    &-menuCard {
+      width: 100%;
+      position: relative;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    &-menuImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(7px);
+      transition: 0.5s;
+
+      &.active {
+        filter: blur(0px);
+      }
+    }
+
+    &-menuItemText {
+      position: absolute;
+      top: -100%;
+      text-align: center;
+      margin-top: 50px;
+      color: $white;
+      font-size: 48px;
+      line-height: 50px;
+      font-family: "PlayfairDisplay-Regular";
+      transition: 0.8s;
+
+      &.active {
+        top: 0;
+      }
+    }
+
+    &-menuItemBtn {
+      position: absolute;
+      bottom: -100%;
+      display: flex;
+      justify-content: center;
+      margin: 0 90px 30px 90px;
+      padding: 13px 124px;
+      color: $white;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: "PlayfairDisplay-Regular";
+      border: 1px solid $white;
+      transition: 0.8s;
+
+      &.active {
+        bottom: 0;
+      }
+
+    }
   }
 }
 
-@media(max-width: 1305px) {
+@media (max-width: 1305px) {
   .main {
     &__content {
       &-section {
@@ -255,10 +317,11 @@
   }
 }
 
-@media(max-width: 1080px) {
+@media (max-width: 1080px) {
   .main {
     &__content {
-      &-sectionText, &-reservBtn {
+      &-sectionText,
+      &-reservBtn {
         margin-top: 0;
       }
 
@@ -274,7 +337,7 @@
   }
 }
 
-@media(max-width: 992px) {
+@media (max-width: 992px) {
   .main {
     &__content {
       &-menuBlock {
@@ -283,7 +346,8 @@
       &-eventBlock {
         flex-wrap: wrap;
       }
-      &-cardsTop, &-cardsBottom {
+      &-cardsTop,
+      &-cardsBottom {
         flex-wrap: wrap;
       }
       &-cardTextBlack {
@@ -293,35 +357,46 @@
   }
 }
 
-@media(max-width: 680px) {
+@media (max-width: 680px) {
   .main {
     &__content {
-      &-menu, &-event {
+      &-menu,
+      &-event {
         text-align: center;
         padding: 0 10px;
       }
 
-      &-menuText, &-menuBtn, &-menuTitle, &-inputBlock, &-reservBtn, &-sectionText {
+      &-menuText,
+      &-menuBtn,
+      &-menuTitle,
+      &-inputBlock,
+      &-reservBtn,
+      &-sectionText {
         margin-left: 0px;
       }
-      &-eventTitle, &-eventText, &-eventBtn {
+      &-eventTitle,
+      &-eventText,
+      &-eventBtn {
         margin-right: 0;
       }
 
       &-eventBlock {
         text-align: center;
       }
-      &-cardsTop, &-cardsBottom {
+      &-cardsTop,
+      &-cardsBottom {
         text-align: center;
       }
     }
   }
 }
 
-@media(max-width: 540px) {
+@media (max-width: 540px) {
   .main {
     &__content {
-      &-inputBlock, &-sectionText, &-reservBtn {
+      &-inputBlock,
+      &-sectionText,
+      &-reservBtn {
         margin-left: 0;
       }
 
@@ -335,7 +410,8 @@
         font-size: 43px;
       }
 
-      &-reservText, &-reservText2 {
+      &-reservText,
+      &-reservText2 {
         margin-left: 0;
         text-align: center;
         padding: 0 10px;
@@ -344,18 +420,18 @@
   }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .main {
     &__content {
       &-reservTitle {
         font-size: 39px;
       }
 
-      &-menuBtn, &-eventBtn, &-reservBtn {
+      &-menuBtn,
+      &-eventBtn,
+      &-reservBtn {
         padding: 10px 85px;
       }
     }
   }
 }
-
-
