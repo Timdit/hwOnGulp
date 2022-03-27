@@ -236,6 +236,7 @@
     }
 
     &-menuCard {
+      max-width: 480px;
       width: 100%;
       position: relative;
       text-align: center;
@@ -271,6 +272,10 @@
       &.active {
         top: 0;
       }
+
+      // &:nth-of-type(1) {
+      //   color: $black;
+      // }
     }
 
     &-menuItemBtn {
@@ -290,7 +295,6 @@
       &.active {
         bottom: 0;
       }
-
     }
   }
 }
@@ -312,6 +316,18 @@
       &-formItems {
         align-items: center;
         flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    &__content {
+      &-menuCards {
+        flex-wrap: wrap;
+        row-gap: 15px;
+        justify-content: space-around;
       }
     }
   }
@@ -432,6 +448,8 @@
       &-reservBtn {
         padding: 10px 85px;
       }
+
+      
     }
   }
 }

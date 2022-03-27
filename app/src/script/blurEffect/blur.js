@@ -6,7 +6,7 @@ const blur = () => {
 
 
     menuCard.forEach((item, i) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
             removeActive()
             menuCardText[i].classList.add('active')
             menuImg[i].classList.add('active')
