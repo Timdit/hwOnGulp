@@ -299,12 +299,11 @@
 
     &-sliderLine {
       display: flex;
-      position: relative;
     }
 
     &-slider {
-      max-width: 960px;
       width: 100%;
+      position: relative;
     }
 
     &-sliderImg {
@@ -318,7 +317,8 @@
       justify-content: center;
       gap: 15px;
       position: absolute;
-      bottom: 0;
+      bottom: 30px;
+      left: 35%;
     }
 
     &-sliderPrev,
@@ -327,6 +327,10 @@
       height: 20px;
       border-radius: 50%;
       background-color: #c4c4c4;
+
+      &.active {
+        background-color: $white;
+      }
     }
 
     &-items {
@@ -336,22 +340,63 @@
     &-itemsRight {
       max-width: 960px;
       width: 100%;
+      overflow-y: scroll;
+      max-height: 700px;
+      height: 100%;
+
+      // ::-webkit-scrollbar {
+      //   width: 1px;
+      //   height: 0px;
+      //   display: flex;
+      //   justify-content: start;
+      //   background-color: #C4C4C4;
+      // }
+
+      // ::-webkit-scrollbar-track {
+      //   background-color: #C4C4C4;
+      //   width: 1px;
+      // }
+
+      // ::-webkit-scrollbar-thumb {
+      //   width: 10px;
+      //   background-color: $lightGrey;
+      // }
     }
+
+    
 
     &-firstItem {
       max-width: 765px;
       width: 100%;
-      margin-left: 54px;
       margin-top: 30px;
+      padding: 0 50px;
     }
 
     &-firstText {
+      max-width: 765px;
+      width: 100%;
       text-align: center;
       margin-top: 50px;
+      margin-bottom: 30px;
       color: $black;
       font-size: 48px;
       line-height: 50px;
-      font-family: 'PlayfairDisplay-Regular';
+      font-family: "PlayfairDisplay-Regular";
+    }
+
+    &-firstTitle {
+      color: $black;
+      font-size: 20px;
+      line-height: 24px;
+      font-family: "times_new_roman";
+    }
+
+    &-firstDescr {
+      color: $black;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: "PlayfairDisplay-Regular";
+      margin-bottom: 30px;
     }
   }
 }

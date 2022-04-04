@@ -4,4 +4,10 @@ import Slider from './slider/slider.js'
 
 burger()
 blur()
-const slider = new Slider
+const slider = new Slider({
+    slider: '.main__content-slider',
+    sliderLine: '.main__content-sliderLine',
+    next: '.main__content-sliderNext',
+    prev: '.main__content-sliderPrev',
+    direction: 'X',
+})
