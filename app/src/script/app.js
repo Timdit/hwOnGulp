@@ -6,8 +6,9 @@ burger()
 blur()
 const slider = new Slider({
     slider: '.main__content-slider',
-    sliderLine: '.main__content-sliderLine',
-    next: '.main__content-sliderNext',
-    prev: '.main__content-sliderPrev',
     direction: 'X',
+    time: 1000,
+    autoplay: true,
+    interval: 4000,
+    dots: true
 })
