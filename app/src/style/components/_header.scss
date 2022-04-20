@@ -183,6 +183,10 @@
         z-index: 110;
       }
 
+      &-items {
+        justify-content: flex-end;
+      }
+
       &-span, &-span2, &-span3 {
         background-color: $black;
       }
