@@ -272,10 +272,6 @@
       &.active {
         top: 0;
       }
-
-      &:nth-of-type(1) {
-        color: $black;
-      }
     }
 
     &-menuItemBtn {
@@ -285,11 +281,11 @@
       justify-content: center;
       margin: 0 90px 30px 90px;
       padding: 13px 124px;
-      color: $black;
+      color: $white;
       font-size: 18px;
       line-height: 24px;
       font-family: "PlayfairDisplay-Regular";
-      border: 1px solid $black;
+      border: 1px solid $white;
       transition: 0.8s;
 
       &.active {
@@ -297,11 +293,11 @@
       }
     }
 
-    &-sliderLine {
+    &-sliderLine, &-sliderLine2 {
       display: flex;
     }
 
-    &-slider {
+    &-slider, &-slider2 {
       max-width: 960px;
       width: 100%;
       position: relative;
@@ -313,7 +309,7 @@
       align-items: center;
     }
 
-    &-sliderLine {
+    &-sliderLine, &-sliderLine2 {
       width: 100%;
     }
 
@@ -343,7 +339,7 @@
       margin-right: 0;
     }
 
-    &-sliderImg {
+    &-sliderImg,  &-sliderImg2 {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -356,32 +352,27 @@
     &-itemsRight {
       max-width: 960px;
       width: 100%;
-      overflow-y: scroll;
-      max-height: 700px;
-      height: 100%;
-      transform: scaleX(-1);
+      padding: 0 20px;
     }
 
     &-first {
-      transform: scaleX(-1);
+      direction: rtl;
+      overflow-y: scroll;
+      max-height: 700px;
+      height: 100%;
     }
 
-    &-itemsRight::-webkit-scrollbar {
+    &-first::-webkit-scrollbar {
       width: 10px;
-      background-color: #C4C4C4;
-    }
-    
-    &-itemsRight::-webkit-scrollbar-track-piece {
-      width: 1px;
-      background-color: #C4C4C4;
+      background: linear-gradient(90deg, #FFFFFF 40%, #C4C4C4 50%, #FFFFFF 40%);
     }
 
-    &-itemsRight::-webkit-scrollbar-thumb {
-      width: 10px;
-      background-color: black;
+    &-first::-webkit-scrollbar-thumb {
+      background-color: #C4C4C4;
     }
 
     &-firstItem {
+      direction: ltr;
       max-width: 765px;
       width: 100%;
       margin-top: 30px;
@@ -389,6 +380,7 @@
     }
 
     &-firstText {
+      direction: ltr;
       max-width: 765px;
       width: 100%;
       text-align: center;
@@ -486,6 +478,10 @@
       }
       &-cardTextBlack {
         display: none;
+      }
+
+      &-items {
+        flex-wrap: wrap;
       }
     }
   }
